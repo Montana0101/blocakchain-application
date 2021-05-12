@@ -1,0 +1,20 @@
+{
+  "name": "blocakchain-application",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Montana0101/blocakchain-application.git",
+  "author": "montana <montana0101@outlook.com>",
+  "scripts": {
+    "dev": "parcel index.html",
+    "precompile": "rimraf ./src/compiled/*",
+    "compile": "node ./src/scripts/compile.js",
+    "precompile:w": "npm run compile",
+    "compile:w": "onchange '/src/contracts/*.sol' -- npm run compile"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "onchange": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "solc": "0.8.4"
+  }
+}
